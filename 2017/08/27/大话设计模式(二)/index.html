@@ -97,7 +97,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, dou" />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -115,16 +115,34 @@
 
 
 
-<meta name="description" content="那逝去了的，终将变成美好的回忆">
-<meta property="og:type" content="website">
-<meta property="og:title" content="豆高腾">
-<meta property="og:url" content="http://dou123.top/index.html">
+<meta name="description" content="十三 、状态模式 状态模式（State）,当一个对象的内在状态改变时允许改变其行为，这个对象看起来像是改变了其类。（DP）  状态模式主要解决的是当控制一个对象状态转换的条件表达式过于复杂时的情况。把状态的判断逻辑转移到表示不同状态的一系列类当中，可以把复杂的判断逻辑简化。  使用时机 当一个对象的行为取决于它的状态，并且它必须在运行时刻根据它的状态改变它的行为时，就可以考虑使用状态模式了。">
+<meta name="keywords" content="设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大话设计模式 (二)">
+<meta property="og:url" content="http://dou123.top/2017/08/27/大话设计模式(二)/index.html">
 <meta property="og:site_name" content="豆高腾">
-<meta property="og:description" content="那逝去了的，终将变成美好的回忆">
+<meta property="og:description" content="十三 、状态模式 状态模式（State）,当一个对象的内在状态改变时允许改变其行为，这个对象看起来像是改变了其类。（DP）  状态模式主要解决的是当控制一个对象状态转换的条件表达式过于复杂时的情况。把状态的判断逻辑转移到表示不同状态的一系列类当中，可以把复杂的判断逻辑简化。  使用时机 当一个对象的行为取决于它的状态，并且它必须在运行时刻根据它的状态改变它的行为时，就可以考虑使用状态模式了。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/s2gfypVH25.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/5pzcdqYWMM.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/WtEXIbuTGF.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/NB66JUKIWH.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/QzvDYSt6Cz.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/zSxwMuKdLN.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/vBoIs61buv.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/jXs11Maog1.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/XwwjwzEdFO.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/ZE0h9eQI8H.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/0Y8s36bFZe.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/yltgDF8U0M.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/Tb03YH2L2x.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/IDDFiNTDWq.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/GJAD87moFL.png">
+<meta property="og:updated_time" content="2017-08-27T14:25:16.013Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="豆高腾">
-<meta name="twitter:description" content="那逝去了的，终将变成美好的回忆">
+<meta name="twitter:title" content="大话设计模式 (二)">
+<meta name="twitter:description" content="十三 、状态模式 状态模式（State）,当一个对象的内在状态改变时允许改变其行为，这个对象看起来像是改变了其类。（DP）  状态模式主要解决的是当控制一个对象状态转换的条件表达式过于复杂时的情况。把状态的判断逻辑转移到表示不同状态的一系列类当中，可以把复杂的判断逻辑简化。  使用时机 当一个对象的行为取决于它的状态，并且它必须在运行时刻根据它的状态改变它的行为时，就可以考虑使用状态模式了。">
+<meta name="twitter:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/s2gfypVH25.png">
 
 
 
@@ -154,13 +172,13 @@
 
 
 
-  <link rel="canonical" href="http://dou123.top/"/>
+  <link rel="canonical" href="http://dou123.top/2017/08/27/大话设计模式(二)/"/>
 
 
 
 
 
-  <title>豆高腾</title>
+  <title>大话设计模式 (二) | 豆高腾</title>
   
 
 
@@ -189,8 +207,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -307,164 +324,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/27/大话设计模式(一)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="豆高腾">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="豆高腾">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/27/大话设计模式(一)/" itemprop="url">大话设计模式 (一)</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T22:04:15+08:00">
-                2017-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="大话设计模式"><a href="#大话设计模式" class="headerlink" title="大话设计模式"></a>大话设计模式</h1><p>标签（空格分隔）： 设计模式 大话 设计 </p>
-<blockquote>
-<p>仅供参考 /(ㄒoㄒ)/~~</p>
-</blockquote>
-<hr>
-<p> <strong> 相关的对应的代码会贴上百度云，是用JAVA写的。想看的可以下载（在文章末尾）。暂时只是一些个概念和大体结构，大部分（jihu）是没有代码的，理解起来肯定会比较难（或许根本理解不了），whatever ,只是个人读书笔记，比较粗糙，凑活看吧。哈哈。</strong></p>
-<h2 id="一-、简单工厂模式"><a href="#一-、简单工厂模式" class="headerlink" title="一 、简单工厂模式"></a>一 、简单工厂模式</h2><p>用一个单独的类来实现易修改和扩展创造实例的过程。</p>
-<p>有图</p>
-<p>​</p>
-<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/15g5l70hp4.png" alt="file"><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/27/大话设计模式(一)/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -494,9 +356,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/27/大话设计模式(二)/" itemprop="url">大话设计模式 (二)</a></h2>
+          <h2 class="post-title" itemprop="name headline">大话设计模式 (二)</h2>
         
 
         <div class="post-meta">
@@ -568,9 +428,8 @@
       
 
       
-        
-          <h3 id="十三-、状态模式"><a href="#十三-、状态模式" class="headerlink" title="十三 、状态模式"></a>十三 、状态模式</h3><blockquote>
-<p>状态模式（State）,当一个对象的内在状态改变时允许改变其行为，这个对象看起来像是改变了其类。（DP）</p>
+        <h3 id="十三 -、状态模式"><a href="# 十三 -、状态模式" class="headerlink" title="十三 、状态模式"></a>十三 、状态模式</h3><blockquote>
+<p>状态模式（State）, 当一个对象的内在状态改变时允许改变其行为，这个对象看起来像是改变了其类。（DP）</p>
 </blockquote>
 <p>状态模式主要解决的是当控制一个对象状态转换的条件表达式过于复杂时的情况。把状态的判断逻辑转移到表示不同状态的一系列类当中，可以把复杂的判断逻辑简化。<br><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/s2gfypVH25.png" alt="file"></p>
 <ul>
@@ -579,456 +438,115 @@
 </ul>
 </li>
 </ul>
-<p>[此处应有（meiyou）代码(zi ji kan)]<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/27/大话设计模式(二)/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/27/大话设计模式(三)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="豆高腾">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="豆高腾">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/27/大话设计模式(三)/" itemprop="url">大话设计模式 (三)</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T22:04:15+08:00">
-                2017-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="设计模式分组"><a href="#设计模式分组" class="headerlink" title="设计模式分组"></a>设计模式分组</h2><p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/36OYNBPPSK.png" alt="file"><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/27/大话设计模式(三)/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/27/大话设计模式(四)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="豆高腾">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="豆高腾">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/27/大话设计模式(四)/" itemprop="url">大话设计模式 (四)</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T22:04:15+08:00">
-                2017-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="面向对象基础"><a href="#面向对象基础" class="headerlink" title="面向对象基础"></a>面向对象基础</h2><p>类的定义:类就是具有相同的属性和功能的对象的抽象的集合。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/27/大话设计模式(四)/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/26/web安全/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="豆高腾">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="豆高腾">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/26/web安全/" itemprop="url">web 安全</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-26T15:40:16+08:00">
-                2017-08-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="WEB安全笔记"><a href="#WEB安全笔记" class="headerlink" title="WEB安全笔记"></a>WEB安全笔记</h1><blockquote>
-<p>根本原则：数据与代码分离</p>
+<p>[此处应有（meiyou）代码(zi ji kan)]<br><a id="more"></a></p>
+<h3 id="十四 -、- 适配器模式"><a href="# 十四 -、- 适配器模式" class="headerlink" title="十四 、 适配器模式"></a>十四 、 适配器模式</h3><blockquote>
+<p>适配器模式（Adapter）, 将一个类的接口转换成客户希望的另外一个接口。Adapter 模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。[DP]</p>
 </blockquote>
-<h3 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h3><p>1.当JS被浏览器认为来自不同源是，请求被拒绝。<br>2.影响同源策略的因素host(域名，IP地址，子域名，端口和协议)。<br>3.EXCEPT：script  . img  .iframe . link 标签可跨区加载资源而不受同源策略的影响。（原因是都带着src属性）</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/26/web安全/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<ul>
+<li><p>类适配器模式</p>
+<ul>
+<li>通过多重继承对一个接口与另一个接口进行匹配，但大部分语言不支持多重继承（C++ 支持）</li>
+</ul>
+</li>
+<li><p>对象适配器模式</p>
+<ul>
+<li><p>对象适配器模式结构图</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/5pzcdqYWMM.png" alt="file"></p>
+</li>
+<li><p>代码示例</p>
+</li>
+</ul>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/WtEXIbuTGF.png" alt="file"></p>
+</li>
+</ul>
+<h3 id="十五 -、- 备忘录模式"><a href="# 十五 -、- 备忘录模式" class="headerlink" title="十五 、 备忘录模式"></a>十五 、 备忘录模式</h3><blockquote>
+<p>备忘录（Memento）: 在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样就可将该对象恢复到原先保存的状态[DP]。</p>
+</blockquote>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/NB66JUKIWH.png" alt="file"></p>
+<p>[DP]</p>
+<ul>
+<li>如果在某个系统中使用命令模式时，需要实现命令的撤销功能，那么命令模式可以使用备忘录模式来存储可撤销操作的状态。</li>
+<li>使用备忘录可以把复杂的对象内部信息对其他的对象屏蔽起来[DP].</li>
+<li>当角色的状态改变时，有可能这个状态无效，这时候就可以使用暂时存储起来的备忘录将状态复原。</li>
+</ul>
+<h3 id="十六 -、- 组合模式"><a href="# 十六 -、- 组合模式" class="headerlink" title="十六 、 组合模式"></a>十六 、 组合模式</h3><blockquote>
+<p>组合模式（Composite）: 将对象组合成树形结构以表示‘部分 - 整体’的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。[DP]</p>
+</blockquote>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/QzvDYSt6Cz.png" alt="file"></p>
+<h4 id="》接口是一种约束"><a href="#》接口是一种约束" class="headerlink" title="》接口是一种约束"></a>》接口是一种约束 </h4><h3 id="十七 -、- 迭代器模式"><a href="# 十七 -、- 迭代器模式" class="headerlink" title="十七 、 迭代器模式"></a> 十七 、 迭代器模式</h3><blockquote>
+<p>迭代器模式（Iterator）: 提供了一种方法顺序访问一个聚合对象中各个元素，而又不暴露该对象的内部表示。[DP] foreach</p>
+</blockquote>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/zSxwMuKdLN.png" alt="file"></p>
+<p>迭代器模式就是分离了集合对象的遍历行为，抽象出一个迭代器类来负责，这样既可以做到不暴露集合的内部结构，又可让外部代码透明的访问集合内部的数据</p>
+<h3 id="十八 -、- 单例模式"><a href="# 十八 -、- 单例模式" class="headerlink" title="十八 、 单例模式"></a>十八 、 单例模式</h3><blockquote>
+<p>单例模式（Singleton）: 保证一个类仅有一个实例，并提供一个访问它的全局访问点。[DP]</p>
+</blockquote>
+<p>通常我们可以用一个全局变量使得一个对象被访问，但它不能防止你实例化多个对象。一个最好的办法就是，让类自身负责保存它的唯一实例。这个类可以保证没有其他实例可以被创建，并且它可以提供一个访问该实例的办法。[DP]</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/vBoIs61buv.png" alt="file"></p>
+<h3 id="十九、- 桥接模式"><a href="# 十九、- 桥接模式" class="headerlink" title="十九、 桥接模式"></a>十九、 桥接模式 </h3><h4 id="继承的麻烦"><a href="# 继承的麻烦" class="headerlink" title="继承的麻烦"></a> 继承的麻烦 </h4><p> 对象的继承关系是在编译时就定义好了，所以无法在运行时改变从父类继承的实现。子类的实现与它的父类有非常紧密的依赖关系，以至于父类实现中的任何变化必然会导致子类发生变化。当你需要复用子类时，如果继承下来的实现不适合解决新问题，则父类必须重写或被其他更换的类替换。这种依赖关系限制了灵活性并最终限制了复用性。[DP]</p>
+<p>在面向对象设计中，我们有一个很重要的设计原则，那就是合成 / 聚合复用原则。即优先使用对象合成 / 聚合，而不是类继承。[DP]</p>
+<blockquote>
+<p>合成 / 聚合复用原则(CARP): 尽量使用合成 / 聚合，尽量不要使用类继承。[J&amp;DP]</p>
+</blockquote>
+<p>聚合表示一种弱的‘拥有’关系，体现的是 A 对象可以包含 B 对象，但 B 对象不是 A 对象的一部分: 合成表示一种强的‘拥有’关系，体现了严格的部分和整体的关系，部分和整体的生命周期一样[DPE]（看图）</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/jXs11Maog1.png" alt="file"></p>
+<h5 id="好处"><a href="# 好处" class="headerlink" title="好处"></a>好处 </h5><p> 优先使用对象的合成 / 聚合将有助于你保持每个类被封装，并被集中在单个任务上。这样类和类继承层次会保持较小规模，并且不太可能增长为不可控制的庞然大物。[DP]</p>
+<blockquote>
+<p>桥接模式（Bridge）: 将抽象部分与它的实现部分分离，使他们都可以独立地变化。[DP]</p>
+</blockquote>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/XwwjwzEdFO.png" alt="file"></p>
+<h3 id="二十、- 命令模式"><a href="# 二十、- 命令模式" class="headerlink" title="二十、 命令模式"></a>二十、 命令模式</h3><blockquote>
+<p>命令模式（Command）: 将一个请求封装为一个对象，从而使你可用不同的请求对客户进行参数化; 对请求进行排队或记录请求日志，以及支持可撤销的操作。[DP]</p>
+</blockquote>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/ZE0h9eQI8H.png" alt="file"></p>
+<h4 id="命令模式作用"><a href="# 命令模式作用" class="headerlink" title="命令模式作用"></a>命令模式作用</h4><ul>
+<li>它能较容易地设计一个命令队列</li>
+<li>在需要的情况下，可以较容易地将命令记入日志</li>
+<li>允许接受请求的一方决定是否要否决请求</li>
+<li>可以容易地实现对请求的撤销和重做</li>
+<li>由于加进新的具体命令类不影响其他的类，因此增加的新的具体命令类很容易。</li>
+<li>命令模式把请求一个操作的对象与知道怎样执行一个操作的对象分隔开[DP]</li>
+<li>​</li>
+</ul>
+<h3 id="二十一、- 责任链模式"><a href="# 二十一、- 责任链模式" class="headerlink" title="二十一、 责任链模式"></a>二十一、 责任链模式</h3><blockquote>
+<p>责任链模式（Chain of Responsibility）: 使多个对象都有机会处理请求，从而避免请求的发送者和接受者之间的耦合关系。将这个对象连成一条链，并沿着这条链传递该请求，直到有一个对象处理它为止。[DP]</p>
+</blockquote>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/0Y8s36bFZe.png" alt="file"></p>
+<p>职责连的好处</p>
+<ul>
+<li>可简化对象的互相连接，它们仅需保持一个指向其后继者的引用，而不需保持它所有的候选接受者的引用。[DP]</li>
+<li>可随时地增加或修改处理一个请求的结构。增强了给对象指派职责的灵活性[DP]</li>
+</ul>
+<h3 id="二十二、- 中介者模式"><a href="# 二十二、- 中介者模式" class="headerlink" title="二十二、 中介者模式"></a>二十二、 中介者模式</h3><blockquote>
+<p>中介者模式（Mediator）: 用一个中介对象来封装一系列的对象交互。中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互。[DP]</p>
+</blockquote>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/yltgDF8U0M.png" alt="file"></p>
+<h4 id="应用场景"><a href="# 应用场景" class="headerlink" title="应用场景"></a>应用场景 </h4><p> 中介者模式一般应用于一组对象以定义良好但是复杂的方式进行通信的场合，以及想定制一个分布在多个类中的行为，而又不想生成太多的子类的场合。</p>
+<h3 id="二十三 -、享元模式"><a href="# 二十三 -、享元模式" class="headerlink" title="二十三 、享元模式"></a>二十三 、享元模式</h3><blockquote>
+<p>享元模式（Flyweight）: 运用共享技术有效地支持大量细粒度的对象[DP]</p>
+</blockquote>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/Tb03YH2L2x.png" alt="file"></p>
+<h4 id="优点"><a href="# 优点" class="headerlink" title="优点"></a>优点 </h4><p> 享元模式可以避免大量相似类的开销。在程序设计中，有时需要生成大量细粒度的类实例来表示数据。如果能发现这些实例除了几个参数外基本上都是相同的，有时就能够大幅度地减少需要实例化的类的数量。如果能把那些参数移到类实例的外面，在方法调用时将他们传递进来，就可以通过共享大幅度地减少单个实例的数目。[减少对象的实例化数量]</p>
+<h3 id="二十四、- 解释器模式"><a href="# 二十四、- 解释器模式" class="headerlink" title="二十四、 解释器模式"></a>二十四、 解释器模式</h3><blockquote>
+<p>解释器模式（Interpreter）: 给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子[DP]</p>
+<p>如果一种特定类型的问题发生的频率足够高，那么可能就值得将该问题的各个实例表述为一个简单语言中的句子。这样就可以构建一个解释器，该解释器通过解释这些句子来解决该问题[DP]  (正则表达式是它的一种应用，解释器为正则表达式定义了一个文法，如何表示一个特定的正则表达式，以及如何解释这个正则表达式)</p>
+</blockquote>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/IDDFiNTDWq.png" alt="file"></p>
+<blockquote>
+<p>当有一个语言需要解释执行，并且你可将该语言中的句子表示为一个抽象语法树时，可使用解释器模式[DP]</p>
+<p>解释器模式可以很容易地改变或扩展文法，因为该模式使用类来表示文法规则，你可使用继承来改变或扩展该文法。其也比较容易实现文法，因为定义抽象语法树中各个节点的类的实现大体类似，这些类都易于直接编写[DP]</p>
+</blockquote>
+<p>举个例子就是人工智能机器人，机器人把人的具体指令解释成相应的行为。</p>
+<h3 id="二十五、- 访问者模式"><a href="# 二十五、- 访问者模式" class="headerlink" title="二十五、 访问者模式"></a>二十五、 访问者模式</h3><blockquote>
+<p>访问者模式（Visitor）: 表示一个作用于某对象结构中的各元素的操作。它可以使你可以在不改变各元素的类的前提下定义作用于这些元素的新操作[DP]</p>
+</blockquote>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/GJAD87moFL.png" alt="file"></p>
+<h5 id="访问者模式应用"><a href="# 访问者模式应用" class="headerlink" title="访问者模式应用"></a>访问者模式应用</h5><ul>
+<li>适用于数据结构相对稳定的系统，它把数据结构和作用于结构上的操作之间的耦合解脱开，使得操作集合可以相对自由的演化。</li>
+<li>访问者模式使得增加新的操作很容易，因为增加新的操作就意味着增加一个新的访问者。访问者模式将有关的行为集中到一个访问者对象中。</li>
+<li>访问者模式通常都会使增加新的数据结构变化困难。</li>
+</ul>
+
       
     </div>
     
@@ -1036,21 +554,102 @@
     
 
     
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/f9HCA8mDeg.JPG" alt="豆高腾 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/dc6L0hldEe.JPG" alt="豆高腾 WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/G4aIiJl5LB.JPG" alt="豆高腾 Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
 
     
 
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    豆高腾
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://dou123.top/2017/08/27/大话设计模式(二)/" title="大话设计模式 (二)">http://dou123.top/2017/08/27/大话设计模式(二)/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/27/大话设计模式(三)/" rel="next" title="大话设计模式 (三)">
+                <i class="fa fa-chevron-left"></i> 大话设计模式 (三)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/27/大话设计模式(一)/" rel="prev" title="大话设计模式 (一)">
+                大话设计模式 (一) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -1060,10 +659,17 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1071,6 +677,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -1091,8 +701,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim"
@@ -1176,6 +795,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#十三 -、状态模式"><span class="nav-number">1.</span> <span class="nav-text">十三 、状态模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十四 -、- 适配器模式"><span class="nav-number">2.</span> <span class="nav-text">十四 、 适配器模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十五 -、- 备忘录模式"><span class="nav-number">3.</span> <span class="nav-text">十五 、 备忘录模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十六 -、- 组合模式"><span class="nav-number">4.</span> <span class="nav-text">十六 、 组合模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#》接口是一种约束"><span class="nav-number">4.1.</span> <span class="nav-text">》接口是一种约束 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十七 -、- 迭代器模式"><span class="nav-number">5.</span> <span class="nav-text"> 十七 、 迭代器模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十八 -、- 单例模式"><span class="nav-number">6.</span> <span class="nav-text">十八 、 单例模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十九、- 桥接模式"><span class="nav-number">7.</span> <span class="nav-text">十九、 桥接模式 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#继承的麻烦"><span class="nav-number">7.1.</span> <span class="nav-text"> 继承的麻烦 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#好处"><span class="nav-number">7.1.1.</span> <span class="nav-text">好处 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二十、- 命令模式"><span class="nav-number">8.</span> <span class="nav-text">二十、 命令模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#命令模式作用"><span class="nav-number">8.1.</span> <span class="nav-text">命令模式作用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二十一、- 责任链模式"><span class="nav-number">9.</span> <span class="nav-text">二十一、 责任链模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二十二、- 中介者模式"><span class="nav-number">10.</span> <span class="nav-text">二十二、 中介者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用场景"><span class="nav-number">10.1.</span> <span class="nav-text">应用场景 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二十三 -、享元模式"><span class="nav-number">11.</span> <span class="nav-text">二十三 、享元模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#优点"><span class="nav-number">11.1.</span> <span class="nav-text">优点 </span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二十四、- 解释器模式"><span class="nav-number">12.</span> <span class="nav-text">二十四、 解释器模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二十五、- 访问者模式"><span class="nav-number">13.</span> <span class="nav-text">二十五、 访问者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#访问者模式应用"><span class="nav-number">13.0.1.</span> <span class="nav-text">访问者模式应用</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1292,10 +927,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 

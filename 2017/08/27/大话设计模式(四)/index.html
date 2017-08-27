@@ -97,7 +97,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, dou" />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -115,17 +115,20 @@
 
 
 
-<meta name="description" content="那逝去了的，终将变成美好的回忆">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://dou123.top/categories/index.html">
+<meta name="description" content="面向对象基础类的定义:类就是具有相同的属性和功能的对象的抽象的集合。">
+<meta name="keywords" content="设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大话设计模式 (四)">
+<meta property="og:url" content="http://dou123.top/2017/08/27/大话设计模式(四)/index.html">
 <meta property="og:site_name" content="豆高腾">
-<meta property="og:description" content="那逝去了的，终将变成美好的回忆">
+<meta property="og:description" content="面向对象基础类的定义:类就是具有相同的属性和功能的对象的抽象的集合。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-27T11:19:46.295Z">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/vhg24yoYDP.png">
+<meta property="og:updated_time" content="2017-08-27T14:25:55.027Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="那逝去了的，终将变成美好的回忆">
+<meta name="twitter:title" content="大话设计模式 (四)">
+<meta name="twitter:description" content="面向对象基础类的定义:类就是具有相同的属性和功能的对象的抽象的集合。">
+<meta name="twitter:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/vhg24yoYDP.png">
 
 
 
@@ -155,13 +158,13 @@
 
 
 
-  <link rel="canonical" href="http://dou123.top/categories/"/>
+  <link rel="canonical" href="http://dou123.top/2017/08/27/大话设计模式(四)/"/>
 
 
 
 
 
-  <title>分类 | 豆高腾</title>
+  <title>大话设计模式 (四) | 豆高腾</title>
   
 
 
@@ -310,40 +313,307 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/27/大话设计模式(四)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="豆高腾">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="豆高腾">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">分类</h2>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 1 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">5</span></li></ul>
-            </div>
-          </div>
+          <h2 class="post-title" itemprop="name headline">大话设计模式 (四)</h2>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T22:04:15+08:00">
+                2017-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="面向对象基础"><a href="# 面向对象基础" class="headerlink" title="面向对象基础"></a>面向对象基础 </h2><p> 类的定义: 类就是具有相同的属性和功能的对象的抽象的集合。<br><a id="more"></a><br>构造方法:</p>
+<p><strong>只针对于 JAVA</strong>  </p>
+<ul>
+<li><h5 id="实例化"><a href="# 实例化" class="headerlink" title="实例化 :"></a>实例化 :</h5><p>对类进行实例化，构造方法与类同名，无返回值，也不需要 void, 在 new 时候调用。</p>
+</li>
+<li><h5 id="构造方法"><a href="# 构造方法" class="headerlink" title="构造方法 :"></a>构造方法 :</h5><p>所有类都有构造方法，如果你不编码则系统默认生成空的构造方法，若你有定义的构造方法，那么默认的构造方法就会失效了。</p>
+</li>
+<li><h5 id="方法重载"><a href="# 方法重载" class="headerlink" title="方法重载 :"></a>方法重载 :</h5><p>方法重载提供了创建同名的多个方法的能力，但这些方法需使用不同的参数类型。 </p>
+</li>
+<li><h5 id="属性和修饰符"><a href="# 属性和修饰符" class="headerlink" title="属性和修饰符 :"></a>属性和修饰符 :</h5><p>属性是一个方法或一对方法，但在调用它的代码看来，它是一个字段，即属性适合于以字段的方式使用方法调用的场合。[属性的名称一般首字母大写，而字段则一般首字母小写或前加‘_’]。（字段和属性时不同的。属性是特殊的方法，可以给对应的字段赋值）</p>
+<ul>
+<li>属性有两个方法 get 和 set。get 访问器返回与声明的属性相同的数据类型，表示的意思是调用时可以得到内部字段的值或引用。set 访问器没有显示设置参数，但它有一个隐式参数，用关键字 value 表示，它的作用是调用属性时可以给内部的字段或引用赋值。</li>
+</ul>
+</li>
+<li><h5 id="封装"><a href="# 封装" class="headerlink" title="封装 :"></a>封装 :</h5><p>每个对象都包含它能进行操作所需要的所有信息，这个特性称为封装，因此对象不必依赖其他对象来完成自己的操作。</p>
+</li>
+<li><h5 id="继承"><a href="# 继承" class="headerlink" title="继承"></a>继承</h5><ul>
+<li>子类拥有父类非 private 的属性和功能。</li>
+<li>子类具有自己的属性和功能。</li>
+<li>子类还可以以自己的方式实现父类的功能（方法重写）。</li>
+<li>子类构造方法需要调用父类同样参数类型的构造方法，用 base 关键字代表父类。（对于构造方法，其不能被继承，只能被调用）</li>
+<li>继承显然是一种类与类之间的强耦合的关系。</li>
+</ul>
+</li>
+<li><h5 id="多态"><a href="# 多态" class="headerlink" title="多态 :"></a>多态 :</h5><p>多态表示不同的对象可以执行相同的动作。但要通过它们自己的实现代码来执行。</p>
+<ul>
+<li>添加（virtual）关键字虚拟化父类的成员。子类可以选择使用（override）关键字，将父类实现替换为它自己的实现，这就是方法重写 Override, 或者叫做方法覆写。</li>
+<li>原理是当方法被调用时，无论对象是否被转换为其父类，都只有位于对象继承链最末端的方法实现会被调用。也就是说，虚方法是按照其运行时类型而非编译时类型进行动态绑定调用的。[AMNFP]</li>
+</ul>
+</li>
+<li><h5 id="抽象类"><a href="# 抽象类" class="headerlink" title="抽象类 :"></a>抽象类 :</h5><ul>
+<li>抽象类不能实例化。</li>
+<li>抽象方法是必须被子类重写的方法。（抽象方法可以被看作是没有实现体的虚方法）</li>
+<li>如果类中包含抽象方法，那么类就必须定义为抽象类，不论是否还包含其他一般方法。</li>
+<li>抽象类通常代表一个抽象概念，它提供一个继承的出发点，当设计一个新的抽象类时，一定是用来继承的，所以，在一个以继承关系形成的等级结构里面，树叶节点应当是具体类，而树枝节点均应当是抽象类[J&amp;DP]</li>
+</ul>
+</li>
+<li><h5 id="接口"><a href="# 接口" class="headerlink" title="接口 :"></a>接口 :</h5><p>接口是把隐式公共方法和属性结合起来，以封装特定功能的一个集合。一旦类实现了接口，类就可以支持接口所指定的所有属性和成员。</p>
+<ul>
+<li>不能实例化。不能有构造方法和字段。不能有修饰符。不能声明虚拟的或静态的。</li>
+<li>声明接口在语法上与声明抽象类完全不同，但不允许提供接口中任何成员的执行方式。</li>
+<li>实现接口的类就必须要实现接口中的所有方法和属性。</li>
+<li>接口的命名，前面要加一个大写字母’I’(规范)</li>
+<li><h4 id="抽象类和接口的区别"><a href="# 抽象类和接口的区别" class="headerlink" title="抽象类和接口的区别"></a>抽象类和接口的区别</h4><ul>
+<li><h5 id="形态上来说"><a href="# 形态上来说" class="headerlink" title="形态上来说"></a>形态上来说</h5><p>​    抽象类可以给出一些成员的实现，接口却不包含成员的实现，抽象类的抽象成员可被子类实现，接口的成员需要实现类完全实现，一个类只能继承一个抽象类，但可实现多个接口。</p>
+</li>
+<li><h5 id="设计模式上来说"><a href="# 设计模式上来说" class="headerlink" title="设计模式上来说"></a>设计模式上来说</h5><p>​    1. 类是对对象的抽象；抽象类是对类的抽象；接口是对行为的抽象。不论是接口、抽象类、类甚至对象，都是在不同层次、不同角度进行抽象的结果，他们的共性就是抽象</p>
+<p>​    2. 如果行为跨越不同类的对象，可使用接口；对于一些相似的类对象，用继承抽象类。</p>
+<p>​    3. 从设计角度讲，抽象类是从子类中发现了公共的东西，泛华出父类，然后子类继承父类，而接口是根本不知道子类的存在，方法如何实现还不确认，预先定义。</p>
+<p>​    4.[抽象类是自底而上抽象出来的，而接口则是自顶向下设计出来的]</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h5 id="泛型"><a href="# 泛型" class="headerlink" title="泛型 :"></a>泛型 :</h5><p>泛型是具有占位符（类型参数）的类、接口、和方法，这些占位符是类、结构、接口和方法所存储或使用的一个或多个类型的占位符。泛型集合类可以将类型参数用作它所存储的对象的类型的占位符：类型参数作为其字段的类型或其方法的参数类型出现[MSDN]。</p>
+<p>不是太懂，来个例子，自己领会吧:sad:</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/vhg24yoYDP.png" alt="file"></p>
+<p>  <strong>以下文字概念反正我没太懂</strong></p>
+<p>通常情况下，都建议使用泛型集合，因为这样可以获得类型安全的直接优点而不需要从基结合类型派生并实现类型特定的成员。此外，如果集合元素为值类型，泛型集合类型的性能通常优于对应的非泛型集合类型（并优于从非泛型基集合类型派生的类型），因为使用泛型时不必对元素进行装箱[MSDN]。</p>
+</li>
+<li><h5 id="委托和事件"><a href="# 委托和事件" class="headerlink" title="委托和事件 :"></a>委托和事件 :</h5><p>委托是对函数的封装，可以当作给方法的特征指定一个名称。而事件则是委托的一种特殊形式，当发生有意义的事情时，事件对象处理通知过程[PC#]</p>
+<ul>
+<li>委托对象用关键字 delegate 来声明，而事件是说在发生其他类或对象关注的事情时，类或对象可通过事件通知它们。事件用 event 关键字声明。</li>
+</ul>
+</li>
+</ul>
+<h4 id="主要参考文献"><a href="# 主要参考文献" class="headerlink" title="主要参考文献"></a>主要参考文献</h4><ol>
+<li>[DP] 《设计模式：可复用面向对象软件的基础》</li>
+<li>[DPE]  《设计模式解析》</li>
+<li>[ASD]  《敏捷软件开发：原则、模式和实践》</li>
+<li>[RIDEC]  《重构–改善既有代码的设计》</li>
+<li>[J&amp;DP]  《Java 与模式》</li>
+<li>[R2P]  《重构与模式》</li>
+<li>[Head First Design Patterns]</li>
+</ol>
+<p>​<br><strong> 再次贴上百度云代码链接 </strong><br><a href="链接：http://pan.baidu.com/s/1hrCya6S 密码：ye5x">相关代码</a></p>
+
       
     </div>
     
     
     
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/f9HCA8mDeg.JPG" alt="豆高腾 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/dc6L0hldEe.JPG" alt="豆高腾 WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/G4aIiJl5LB.JPG" alt="豆高腾 Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    豆高腾
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://dou123.top/2017/08/27/大话设计模式(四)/" title="大话设计模式 (四)">http://dou123.top/2017/08/27/大话设计模式(四)/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/26/web安全/" rel="next" title="web 安全">
+                <i class="fa fa-chevron-left"></i> web 安全
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/27/大话设计模式(三)/" rel="prev" title="大话设计模式 (三)">
+                大话设计模式 (三) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -352,6 +622,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -372,8 +646,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim"
@@ -457,6 +740,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象基础"><span class="nav-number">1.</span> <span class="nav-text">面向对象基础 </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#实例化"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">实例化 :</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#构造方法"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">构造方法 :</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方法重载"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">方法重载 :</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#属性和修饰符"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">属性和修饰符 :</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#封装"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">封装 :</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#继承"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多态"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">多态 :</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#抽象类"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">抽象类 :</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#接口"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">接口 :</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象类和接口的区别"><span class="nav-number">1.0.1.</span> <span class="nav-text">抽象类和接口的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#形态上来说"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">形态上来说</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设计模式上来说"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">设计模式上来说</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#泛型"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">泛型 :</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#委托和事件"><span class="nav-number">1.0.1.4.</span> <span class="nav-text">委托和事件 :</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主要参考文献"><span class="nav-number">1.0.2.</span> <span class="nav-text">主要参考文献</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -573,10 +872,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 

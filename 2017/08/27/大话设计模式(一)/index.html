@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="设计模式," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="豆高腾" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="大话设计模式标签（空格分隔）： 设计模式 大话 设计   仅供参考 /(ㄒoㄒ)/~~     相关的对应的代码会贴上百度云，是用JAVA写的。想看的可以下载（在文章末尾）。暂时只是一些个概念和大体结构，大部分（jihu）是没有代码的，理解起来肯定会比较难（或许根本理解不了），whatever ,只是个人读书笔记，比较粗糙，凑活看吧。哈哈。 一 、简单工厂模式用一个单独的类来实现易修改和扩展创造实">
+<meta name="keywords" content="设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大话设计模式 (一)">
+<meta property="og:url" content="http://dou123.top/2017/08/27/大话设计模式(一)/index.html">
+<meta property="og:site_name" content="豆高腾">
+<meta property="og:description" content="大话设计模式标签（空格分隔）： 设计模式 大话 设计   仅供参考 /(ㄒoㄒ)/~~     相关的对应的代码会贴上百度云，是用JAVA写的。想看的可以下载（在文章末尾）。暂时只是一些个概念和大体结构，大部分（jihu）是没有代码的，理解起来肯定会比较难（或许根本理解不了），whatever ,只是个人读书笔记，比较粗糙，凑活看吧。哈哈。 一 、简单工厂模式用一个单独的类来实现易修改和扩展创造实">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/15g5l70hp4.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/IA3QfU1E98.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/vUONezDTlj.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/rAPdDmDzFB.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/PhTOgnXBBx.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/o80dLdOrHs.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/RQsQCpCnJf.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/t1Y85hRs2w.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/8pOzXUkebL.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/aO5OtPSsM4.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/cDc1UBPW0f.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/niNz7YA1sT.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/cPj6c33QBo.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/DVcKXCnAjo.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/jqlLDSWWAL.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/9WDJd5ieLW.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/FEYW6L8Xog.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/rv3rpsCuw0.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/wcXvmWFALn.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/LBWTPgnhAH.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/MGm6CKfV7Q.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/sCNmzvSzOf.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/1trAg5juXc.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/ORk4iTs8H1.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/nWidq8Rlbi.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/aayu0lVswU.png">
+<meta property="og:updated_time" content="2017-08-27T14:29:17.695Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="大话设计模式 (一)">
+<meta name="twitter:description" content="大话设计模式标签（空格分隔）： 设计模式 大话 设计   仅供参考 /(ㄒoㄒ)/~~     相关的对应的代码会贴上百度云，是用JAVA写的。想看的可以下载（在文章末尾）。暂时只是一些个概念和大体结构，大部分（jihu）是没有代码的，理解起来肯定会比较难（或许根本理解不了），whatever ,只是个人读书笔记，比较粗糙，凑活看吧。哈哈。 一 、简单工厂模式用一个单独的类来实现易修改和扩展创造实">
+<meta name="twitter:image" content="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/15g5l70hp4.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dou123.top/2017/08/27/大话设计模式(一)/"/>
+
+
+
+
+
+  <title>大话设计模式 (一) | 豆高腾</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?12a251db7655bb554645172c4f49e664";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">豆高腾</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/27/大话设计模式(一)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="豆高腾">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="豆高腾">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">大话设计模式 (一)</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T22:04:15+08:00">
+                2017-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="大话设计模式"><a href="# 大话设计模式" class="headerlink" title="大话设计模式"></a>大话设计模式 </h1><p> 标签（空格分隔）： 设计模式 大话 设计 </p>
+<blockquote>
+<p>仅供参考 /(ㄒ o ㄒ)/~~</p>
+</blockquote>
+<hr>
+<p> <strong> 相关的对应的代码会贴上百度云，是用 JAVA 写的。想看的可以下载（在文章末尾）。暂时只是一些个概念和大体结构，大部分（jihu）是没有代码的，理解起来肯定会比较难（或许根本理解不了），whatever , 只是个人读书笔记，比较粗糙，凑活看吧。哈哈。</strong></p>
+<h2 id="一 -、简单工厂模式"><a href="# 一 -、简单工厂模式" class="headerlink" title="一 、简单工厂模式"></a>一 、简单工厂模式 </h2><p> 用一个单独的类来实现易修改和扩展创造实例的过程。</p>
+<p>有图</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/15g5l70hp4.png" alt="file"><br><a id="more"></a><br>​</p>
+<ul>
+<li>UML 类图图示样例</li>
+</ul>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/IA3QfU1E98.png" alt="file"></p>
+<p>​</p>
+<p>  <strong>‘+’表示 public</strong></p>
+<p>  <strong>‘-‘表示 private</strong></p>
+<p>  <strong>‘#’表示 protected</strong></p>
+<p>​</p>
+<ul>
+<li><p>继承关系用空心三角形 + 实线来表示</p>
+<p>如图</p>
+</li>
+</ul>
+<p>​</p>
+<p>  <img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/vUONezDTlj.png" alt="file"></p>
+<p>​</p>
+<ul>
+<li><p>接口关系用空心三角形 + 虚线表示</p>
+<p>形如上图（略）</p>
+</li>
+</ul>
+<p>​</p>
+<ul>
+<li><p>关联关系用实线箭头表示</p>
+<p>形如上图（略）、</p>
+</li>
+</ul>
+<p>​</p>
+<ul>
+<li>聚合关系</li>
+</ul>
+<p>​</p>
+<blockquote>
+<p>聚合表示一种弱的’拥有‘关系，体现的是 A 对象可以包含 B 对象，但 B 对象不是 A 对象的一部分  –《设计模式》第二版</p>
+<p>用空心的菱形 + 实线箭头表示</p>
+</blockquote>
+<p>​</p>
+<p>这个有图哦:happy:</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/rAPdDmDzFB.png" alt="file"></p>
+<p>​</p>
+<ul>
+<li>组合关系</li>
+</ul>
+<p>​</p>
+<blockquote>
+<p>一种强的’拥有’关系，体现了严格的部分和整体的关系，部分和整体的生命周期一样 –《设计模式》</p>
+</blockquote>
+<p>​</p>
+<p>组合关系用实心的菱形 + 实线箭头来表示，连线两端的数字 1,2，被称为基数表明这一端的类可以有几个实例（n 表示无数）。</p>
+<p>这个也是有图的 看图</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/PhTOgnXBBx.png" alt="file"></p>
+<p>​</p>
+<ul>
+<li><p>依赖关系</p>
+<p>用虚线箭头表示</p>
+<p>UML 最后一张图</p>
+</li>
+</ul>
+<p>​</p>
+<p> <img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/o80dLdOrHs.png" alt="file"></p>
+<h2 id="二 -、策略模式"><a href="# 二 -、策略模式" class="headerlink" title="二 、策略模式"></a>二 、策略模式</h2><p>​</p>
+<blockquote>
+<p>定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到使用算法的客户。[DP]</p>
+</blockquote>
+<p>​</p>
+<blockquote>
+<p>面向对象的编程, 并不是越多越好，类的划分是为了封装，但分类的基础是抽象，具有相同属性和功能的对象的抽象集合才是类</p>
+</blockquote>
+<p>​</p>
+<p>策略模式结构图</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/RQsQCpCnJf.png" alt="file"></p>
+<p>​</p>
+<blockquote>
+<p>策略模式反思</p>
+<p>策略模式是定义一系列算法的方法，从概念上来讲，所有这些算法完成的都是相同的工作，只是实现不同，他可以以相同的方式调用所有的算法，减少了各种算法类与使用算法类之间的耦合 –《设计模式》[DPE]</p>
+</blockquote>
+<p>​</p>
+<ul>
+<li>策略模式的另一个优点是简化了单元测试，因为每个算法都有自己的类，可以通过自己的接口单独测试 –《设计模式》【DPE】</li>
+</ul>
+<p>​</p>
+<h4 id="1- 单一职责原则 -SRP"><a href="#1- 单一职责原则 -SRP" class="headerlink" title="1. 单一职责原则(SRP)"></a>1. 单一职责原则(SRP)</h4><p>​</p>
+<p>就一个类而言，应该仅有一个引起它变化的原因。</p>
+<p>​</p>
+<blockquote>
+<p>如果一个类承担的职责过多，就等于把这些职责耦合在一起，一个职责的变化可能会削弱或者抑制这个类完成其他职责的能力。这种耦合会导致脆弱的设计，当变化发生时，设计会遭到意想不到的破坏【ASD】。</p>
+</blockquote>
+<p>​</p>
+<h4 id="2- 开放 - 封闭原则 - 简称 OCP"><a href="#2- 开放 - 封闭原则 - 简称 OCP" class="headerlink" title="2. 开放 - 封闭原则[简称 OCP]"></a>2. 开放 - 封闭原则[简称 OCP]</h4><p>​</p>
+<p>是说软件实体（类，模块，函数等等），应该可以扩展，但是不可修改【ASD】</p>
+<p>​</p>
+<blockquote>
+<p>开放 - 封闭原则是面向对象设计的核心所在，遵循这个原则可以带来面向对象技术所声称的巨大好处，也就是可维护，可扩展，可复用，灵活性好。开发人员应该仅对程序中呈现出频繁变化的那些部分做出抽象，然而，对于应用程序中的每个部分都刻意的进行抽象同样不是一个好主意。拒绝不成熟的抽象和抽象本身一样重要【ASD】</p>
+</blockquote>
+<p>​</p>
+<h4 id="3- 依赖倒转原则"><a href="#3- 依赖倒转原则" class="headerlink" title="3. 依赖倒转原则"></a>3. 依赖倒转原则</h4><p>​</p>
+<p>抽象不应该依赖细节，细节应该依赖于抽象。（针对接口编程，不要对实现编程）</p>
+<p>​</p>
+<blockquote>
+<p>依赖倒转原则</p>
+</blockquote>
+<p>​</p>
+<ol>
+<li><p>高层模块不应该依赖底层模块，两个都应该依赖抽象。</p>
+</li>
+<li><p>抽象不应该依赖细节，细节应该依赖抽象。【ASD】</p>
+</li>
+</ol>
+<p>​</p>
+<h4 id="4- 里氏代换原则【LSP】"><a href="#4- 里氏代换原则【LSP】" class="headerlink" title="4. 里氏代换原则【LSP】"></a>4. 里氏代换原则【LSP】</h4><p>​</p>
+<blockquote>
+<p>子类型必须能够替换掉他们的父类型。【ASD】</p>
+</blockquote>
+<p>​</p>
+<p>只有当子类可以替换掉父类，软件单位的功能不受到影响时，父类才能真正被复用，而子类也能够在父类的基础上增加新的行为。</p>
+<p>如图</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/t1Y85hRs2w.png" alt="file"></p>
+<p>​</p>
+<p>（依赖倒转其实就是谁也不依赖谁，除了约定的接口，大家都可以灵活自如）</p>
+<p>​</p>
+<h4 id="原则总结"><a href="# 原则总结" class="headerlink" title="原则总结"></a><strong>原则总结</strong></h4><p>​</p>
+<p>依赖倒转其实可以说是面向对象设计的标志，用哪种语言来编写程序不重要，如果编写时考虑的都是如何针对抽象编程而不是针对细节编程，即程序中所有的依赖关系都是止于抽象类或者接口，那就是面向对象的设计，反之就是过程化的设计了【ASD】</p>
+<p>​</p>
+<h2 id="三 -、装饰模式"><a href="# 三 -、装饰模式" class="headerlink" title="三 、装饰模式"></a>三 、装饰模式</h2><p>​</p>
+<blockquote>
+<p>动态的给一个对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更加灵活【DP】</p>
+</blockquote>
+<p>​</p>
+<p>如图装饰模式结构图</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/8pOzXUkebL.png" alt="file"></p>
+<p>​</p>
+<p>装饰模式实例代码（感觉穿衣服的例子比较有意思，是 java 代码:sad:, 逻辑能看懂:sad:）</p>
+<p>​</p>
+<p>后面有例子总结，不想看图的直接跳到后面看。</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/aO5OtPSsM4.png" alt="file"></p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/cDc1UBPW0f.png" alt="file"></p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/niNz7YA1sT.png" alt="file"></p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/cPj6c33QBo.png" alt="file"></p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/DVcKXCnAjo.png" alt="file"></p>
+<p>​</p>
+<p><em>小结</em></p>
+<p>​</p>
+<p>我理解的大概的过程是这样一个工程。就是先从最后的具体服饰类开始往上逐个 <strong> 装饰 </strong> 的走。从具体服饰类到服饰类再到 Person 类。（可以从结果显示中看到这一过程）。</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<ul>
+<li>总结</li>
+</ul>
+<p>​</p>
+<blockquote>
+<p>装饰模式是为已有功能动态地添加更多功能的一种方式，装饰模式提供了一个非常好的解决方案，它把每个要装饰的功能放在单独的类中，并让这个类包装它所要装饰的对象，因此，当需要执行特殊行为时，客户代码就可以在运行时根据需要有条件地，按顺序地使用装饰功能包装对象了【DP】</p>
+</blockquote>
+<p>​</p>
+<p>（优点：把类中的装饰功能从类中搬除去除，这样可以简化原有的类。这样做的更大的好处是有效的把类的核心职责和装饰功能区分开了，而且可以去除相关类中重复的装饰逻辑。）</p>
+<p>​</p>
+<h2 id="四 -、代理模式（Proxy）"><a href="# 四 -、代理模式（Proxy）" class="headerlink" title="四 、代理模式（Proxy）"></a>四 、代理模式（Proxy）</h2><p>​</p>
+<blockquote>
+<p>为其他对象提供一种代理以控制对这个对象的访问。【DP】</p>
+</blockquote>
+<p>​</p>
+<p>代理模式结构图</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/jqlLDSWWAL.png" alt="file"></p>
+<p>​</p>
+<p><em>注释</em></p>
+<p>​</p>
+<p>大概的意思就是，有一个公共的接口。中间代理和实际实体两者都实现接口的方法。当具体操作的时候，用代理操作，在代理内部实现实际方法的实例化操作来间接的替代实际方法。</p>
+<p>​</p>
+<ul>
+<li>应用场合</li>
+</ul>
+<p>​</p>
+<ol>
+<li><p>远程代理，也就是为一个对象在不同的地址空间提供局部代表。这样可以隐藏一个对象存在于不同地址空间的事实[DP]。</p>
+</li>
+<li><p>虚拟代理，是根据需要创建开销很大的对象。通过它来存放实例化需要很长时间的真实对象[DP]。这样就可以达到性能的最优化，比如打开一个很大的 HTML 页面，虽然有很多图片但是还是能很快的打开它，此时看到的是文字，图片是一张一张的下载后才能看到。那些未打开的图片框，就是通过虚拟代理来替代了真实的图片，此时代理存储了真实图片的路径和尺寸。其实，浏览器当中是用代理模式来优化下载的。</p>
+</li>
+<li><p>安全代理，用来控制真实对象访问时的权限[DP]。一般用于对象应该有不同的访问权限的时候。</p>
+</li>
+<li><p>智能指引，是指当调用真实的对象时，代理处理另外一些事情[DP]。如计算真实对象的引用次数，当该对象没有引用时，可以自动释放它: 或当第一次引用一个持久对象时，将它装入内存: 或在访问一个实际对象前，检查是否已经锁定它，以确保其他对象不能改变它。它们都是通过代理在访问一个对象时附加一些内务处理。</p>
+</li>
+</ol>
+<p>​</p>
+<p>  <code>代理模式其实就是在访问对象时引入一定程度的间接性，因为这种间接性，可以附加多种用途。</code></p>
+<p>​</p>
+<h2 id="五 -、工厂方法模式"><a href="# 五 -、工厂方法模式" class="headerlink" title="五 、工厂方法模式"></a>五 、工厂方法模式</h2><p>​</p>
+<p>简单工厂模式的最大优点在于工厂类中包含了必要的逻辑判断，根据客户端的选择条件动态实例化相关的类，对于客户端来说，去除了与具体产品的依赖。</p>
+<p>​</p>
+<blockquote>
+<p><strong>工厂方法模式</strong> ，定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类。[DP]</p>
+</blockquote>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/9WDJd5ieLW.png" alt="file"></p>
+<p>​</p>
+<p>工厂方法模式具体实现示例图</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/FEYW6L8Xog.png" alt="file"></p>
+<p>​</p>
+<ul>
+<li>工厂方法模式实现时，客户端需要决定实例化哪一个工厂来实现运算类，选择判断的问题还是存在的，也就是说，工厂方法把简单工厂的内部逻辑判断移到了客户端代码来进行。你想要加功能，本来是改工厂类的，而现在是修改客户端。</li>
+</ul>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="六 -、原型模式"><a href="# 六 -、原型模式" class="headerlink" title="六 、原型模式"></a>六 、原型模式</h2><p>​</p>
+<blockquote>
+<p>用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象[DP].</p>
+</blockquote>
+<p>​</p>
+<p>原型模式结构图</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/rv3rpsCuw0.png" alt="file"></p>
+<p>​</p>
+<p><em>注释</em>  原型模式其实就是从一个对象再创建另外一个可定制的对象，而且不需知道任何创建的细节。</p>
+<p>​</p>
+<p>原型模式中一般在初始化的信息不发生变化的情况下，克隆时最好的办法。这即隐藏了对象创建的细节，又对性能是大大的提高。同样也不用重新初始化对象，而是动态地获得对象运行时的状态。</p>
+<p>​</p>
+<ul>
+<li><p>‘浅复制’: 被复制对象的所有变量都含有与原来的对象相同的值，而所有的对其他对象的引用都仍然指向原来的对象。</p>
+</li>
+<li><p>‘深复制’: 深复制把引用对象的变量指向复制过的新对象，而不是原有的被引用的对象。</p>
+</li>
+</ul>
+<p>​</p>
+<blockquote>
+<p>声明：这一模式，本人看的不是太懂。感觉有些东西不通。下面会有一个详细的例子，可以参考一下。不解释。</p>
+</blockquote>
+<p>​</p>
+<p><strong>简历的深复制实现</strong></p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/wcXvmWFALn.png" alt="file"></p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/LBWTPgnhAH.png" alt="file"></p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/MGm6CKfV7Q.png" alt="file"></p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<h2 id="七 -、模板方法模式"><a href="# 七 -、模板方法模式" class="headerlink" title="七 、模板方法模式"></a>七 、模板方法模式</h2><p>​</p>
+<p>当我们要完成在某一细节层次一致的一个过程或一系列步骤，但其个别步骤在更详细的层次上的实现可能不同时，我们通常考虑用模板模式方法处理。</p>
+<p>​</p>
+<blockquote>
+<p>模板方法模式：定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤[DP]</p>
+</blockquote>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/sCNmzvSzOf.png" alt="file"></p>
+<p>​</p>
+<ul>
+<li><p>模板方法模式特点</p>
+<ul>
+<li><p>模板方法模式是通过把不变行为搬移到超类，去除子类中的重复代码来体现其优势。</p>
+</li>
+<li><p>提供了一个很好的代码复用平台</p>
+</li>
+<li><p>当不变的和可变的行为在方法的子类实现中混合在一起的时候，不变的行为就会在子类中重复出现。通过模板方法模式把这些行为搬移到单一的地方，这样就帮助子类摆脱重复的不变行为的纠缠。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>​</p>
+<h2 id="八、迪米特法则"><a href="# 八、迪米特法则" class="headerlink" title="八、迪米特法则"></a>八、迪米特法则</h2><p>​</p>
+<blockquote>
+<p>迪米特法则（LoD）/ 最少知识原则[J&amp;DP]: 如果两个类不必彼此直接通信，那么这两个类就不应当发生直接的相互作用。如果其中一个类需要调用另一个类的某一个方法的话，可以通过第三者转发这个调用。[J&amp;DP]</p>
+</blockquote>
+<p>​</p>
+<h2 id="九 -、外观模式"><a href="# 九 -、外观模式" class="headerlink" title="九 、外观模式"></a>九 、外观模式</h2><p>​</p>
+<blockquote>
+<p>外观模式（Facade）: 为子系统中的一组接口提供一个一致的界面，此模式定义了一个高层接口，这个接口使得这一子系统更加容易使用[DP]</p>
+</blockquote>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/1trAg5juXc.png" alt="file"></p>
+<p>​</p>
+<h2 id="十 -、- 建造者模式"><a href="# 十 -、- 建造者模式" class="headerlink" title="十 、 建造者模式"></a>十 、 建造者模式</h2><p>​</p>
+<blockquote>
+<p>建造者模式（Builder）: 将一个复杂对象的建造与它的表示分离，使得同样的建造过程可以创建不同的表示[DP]</p>
+</blockquote>
+<p>​</p>
+<blockquote>
+<p>建造者模式可以将一个产品的内部表象与产品的生成过程分割开来，从而可以使一个建造过程生成具有不同的内部表象的产品对象。</p>
+</blockquote>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/ORk4iTs8H1.png" alt="file"></p>
+<p>​</p>
+<ul>
+<li>建造者模式是在当创建复杂对象的算法应该独立于该对象的组成部分以及他们的装配方式时适用的模式。</li>
+</ul>
+<p>​</p>
+<h2 id="十一 -、观察者模式"><a href="# 十一 -、观察者模式" class="headerlink" title="十一 、观察者模式"></a>十一 、观察者模式</h2><p>​</p>
+<blockquote>
+<p>观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态发生变化时，会通知所有观察者对象，使他们能够自动更新自己[DP]。</p>
+</blockquote>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/nWidq8Rlbi.png" alt="file"></p>
+<p>​</p>
+<h4 id="观察者模式特点"><a href="# 观察者模式特点" class="headerlink" title="观察者模式特点"></a>观察者模式特点</h4><p>​</p>
+<ul>
+<li>当一个对象的改变需要同时改变其他对象时而且它并不知道具体有多少对象有待改变时，应该考虑使用观察中模式。</li>
+</ul>
+<p>​</p>
+<ul>
+<li>当一个抽象模型有两个方面，其中一个方面依赖于另一个方面，这时用观察者模式可以将两者封装在独立的对象中使他们各自独立的改变和复用。</li>
+</ul>
+<p>​</p>
+<p>  <strong>委托</strong>[这段有点突兀，我理解的大概意思是把观察者也抽象了，直接委托具体的类去实现观察类的抽象。]</p>
+<p>​</p>
+<p>  委托就是一种引用方法的类型。一旦为委托分配了方法，委托将与该方法具有完全相同的行为。委托方法的使用可以像其他任何方法一样，具有参数和返回值。委托可以看作是对函数的抽象，是函数的‘类’，委托的实例将代表一个具体的函数。</p>
+<p>​</p>
+<h3 id="十二、抽象工厂模式"><a href="# 十二、抽象工厂模式" class="headerlink" title="十二、抽象工厂模式"></a>十二、抽象工厂模式</h3><p>​</p>
+<blockquote>
+<p>抽象工厂模式（Abstract Factory）, 提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。[DP]</p>
+</blockquote>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/aayu0lVswU.png" alt="file"></p>
+<p>​</p>
+<p><a href="链接：http://pan.baidu.com/s/1hrCya6S 密码：ye5x">百度云链接</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/f9HCA8mDeg.JPG" alt="豆高腾 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/dc6L0hldEe.JPG" alt="豆高腾 WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/G4aIiJl5LB.JPG" alt="豆高腾 Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    豆高腾
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://dou123.top/2017/08/27/大话设计模式(一)/" title="大话设计模式 (一)">http://dou123.top/2017/08/27/大话设计模式(一)/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/27/大话设计模式(二)/" rel="next" title="大话设计模式 (二)">
+                <i class="fa fa-chevron-left"></i> 大话设计模式 (二)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim"
+               alt="豆高腾" />
+          <p class="site-author-name" itemprop="name">豆高腾</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives">
+            
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="dougaoteng@163.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#大话设计模式"><span class="nav-number">1.</span> <span class="nav-text">大话设计模式 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一 -、简单工厂模式"><span class="nav-number">1.1.</span> <span class="nav-text">一 、简单工厂模式 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二 -、策略模式"><span class="nav-number">1.2.</span> <span class="nav-text">二 、策略模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1- 单一职责原则 -SRP"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">1. 单一职责原则(SRP)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2- 开放 - 封闭原则 - 简称 OCP"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">2. 开放 - 封闭原则[简称 OCP]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3- 依赖倒转原则"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">3. 依赖倒转原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4- 里氏代换原则【LSP】"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">4. 里氏代换原则【LSP】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原则总结"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">原则总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三 -、装饰模式"><span class="nav-number">1.3.</span> <span class="nav-text">三 、装饰模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四 -、代理模式（Proxy）"><span class="nav-number">1.4.</span> <span class="nav-text">四 、代理模式（Proxy）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五 -、工厂方法模式"><span class="nav-number">1.5.</span> <span class="nav-text">五 、工厂方法模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六 -、原型模式"><span class="nav-number">1.6.</span> <span class="nav-text">六 、原型模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七 -、模板方法模式"><span class="nav-number">1.7.</span> <span class="nav-text">七 、模板方法模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、迪米特法则"><span class="nav-number">1.8.</span> <span class="nav-text">八、迪米特法则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九 -、外观模式"><span class="nav-number">1.9.</span> <span class="nav-text">九 、外观模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十 -、- 建造者模式"><span class="nav-number">1.10.</span> <span class="nav-text">十 、 建造者模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一 -、观察者模式"><span class="nav-number">1.11.</span> <span class="nav-text">十一 、观察者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#观察者模式特点"><span class="nav-number">1.11.0.1.</span> <span class="nav-text">观察者模式特点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十二、抽象工厂模式"><span class="nav-number">1.11.1.</span> <span class="nav-text">十二、抽象工厂模式</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">豆高腾</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
