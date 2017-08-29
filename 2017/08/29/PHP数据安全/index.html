@@ -97,7 +97,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="mysql 字段类型属性," />
+  <meta name="keywords" content="数据安全 PHP 函数," />
 
 
 
@@ -115,18 +115,18 @@
 
 
 
-<meta name="description" content="建一张数据表 ‘t’: 查看一下表的数据结构： mysql&amp;gt; select * from t;+——+——+| a    | b    |+——+——+| 1 |    2 |+——+——+1 row in set (0.03 sec)">
-<meta name="keywords" content="mysql 字段类型属性">
+<meta name="description" content="三种 PHP 数据安全防范示例  常见的转义 html 例如一个用户的表单输入获取 $a = $_GET[&amp;#39;username&amp;#39;] 其中的 username 值可能是一样有恶意的 JS 脚本可能造成不必要的麻烦。 解决办法 ·$a = htmlspecialchars($_GET[&amp;#39;username&amp;#39;],ENT_QUOTES); htmlspecialchars()">
+<meta name="keywords" content="数据安全 PHP 函数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql 之 ZEROFILL 数据类型属性补 0 操作">
-<meta property="og:url" content="http://dou123.top/2017/08/28/Mysql之ZEROFILL数据类型属性补0操作/index.html">
+<meta property="og:title" content="PHP 数据安全">
+<meta property="og:url" content="http://dou123.top/2017/08/29/PHP数据安全/index.html">
 <meta property="og:site_name" content="豆高腾">
-<meta property="og:description" content="建一张数据表 ‘t’: 查看一下表的数据结构： mysql&amp;gt; select * from t;+——+——+| a    | b    |+——+——+| 1 |    2 |+——+——+1 row in set (0.03 sec)">
+<meta property="og:description" content="三种 PHP 数据安全防范示例  常见的转义 html 例如一个用户的表单输入获取 $a = $_GET[&amp;#39;username&amp;#39;] 其中的 username 值可能是一样有恶意的 JS 脚本可能造成不必要的麻烦。 解决办法 ·$a = htmlspecialchars($_GET[&amp;#39;username&amp;#39;],ENT_QUOTES); htmlspecialchars()">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-28T15:01:01.718Z">
+<meta property="og:updated_time" content="2017-08-29T05:19:20.797Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mysql 之 ZEROFILL 数据类型属性补 0 操作">
-<meta name="twitter:description" content="建一张数据表 ‘t’: 查看一下表的数据结构： mysql&amp;gt; select * from t;+——+——+| a    | b    |+——+——+| 1 |    2 |+——+——+1 row in set (0.03 sec)">
+<meta name="twitter:title" content="PHP 数据安全">
+<meta name="twitter:description" content="三种 PHP 数据安全防范示例  常见的转义 html 例如一个用户的表单输入获取 $a = $_GET[&amp;#39;username&amp;#39;] 其中的 username 值可能是一样有恶意的 JS 脚本可能造成不必要的麻烦。 解决办法 ·$a = htmlspecialchars($_GET[&amp;#39;username&amp;#39;],ENT_QUOTES); htmlspecialchars()">
 
 
 
@@ -156,13 +156,13 @@
 
 
 
-  <link rel="canonical" href="http://dou123.top/2017/08/28/Mysql之ZEROFILL数据类型属性补0操作/"/>
+  <link rel="canonical" href="http://dou123.top/2017/08/29/PHP数据安全/"/>
 
 
 
 
 
-  <title>Mysql 之 ZEROFILL 数据类型属性补 0 操作 | 豆高腾</title>
+  <title>PHP 数据安全 | 豆高腾</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/28/Mysql之ZEROFILL数据类型属性补0操作/">
+    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/29/PHP数据安全/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="豆高腾">
@@ -340,7 +340,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Mysql 之 ZEROFILL 数据类型属性补 0 操作</h2>
+          <h2 class="post-title" itemprop="name headline">PHP 数据安全</h2>
         
 
         <div class="post-meta">
@@ -352,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T22:23:17+08:00">
-                2017-08-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-29T13:18:22+08:00">
+                2017-08-29
               </time>
             
 
@@ -375,8 +375,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mysql/" itemprop="url" rel="index">
-                    <span itemprop="name">Mysql</span>
+                  <a href="/categories/PHP数据安全/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP数据安全</span>
                   </a>
                 </span>
 
@@ -412,21 +412,51 @@
       
 
       
-        <p> 建一张数据表 ‘t’:</p>
-<p> 查看一下表的数据结构：</p>
-<p>mysql&gt; select * from t;<br>+——+——+<br>| a    | b    |<br>+——+——+<br>| 1 |    2 |<br>+——+——+<br>1 row in set (0.03 sec)<br><a id="more"></a><br>mysql&gt; desc t;<br>+——-+——————+——+—–+———+——-+<br>| Field | Type             | Null | Key | Default | Extra |<br>+——-+——————+——+—–+———+——-+<br>| a     | int(10) unsigned | YES  |     | NULL    |       |<br>| b     | int(10) unsigned | YES  |     | NULL    |       |<br>+——-+——————+——+—–+———+——-+<br>2 rows in set (0.03 sec)</p>
-<p> 我们可以看到 a,b 字段的数据类型都是 int(10);</p>
-<p> 接下来让我们改变一下 a 列的数据类型属性。</p>
-<p>mysql&gt; alter table t change column a a int(4) unsigned zerofill;<br>Query OK, 0 rows affected (0.07 sec)<br>Records: 0  Duplicates: 0  Warnings: 0</p>
-<p> 为 a 字段添加了 zerofill 属性，并将默认的 int(10) 修改为 int(4).</p>
-<p> 查看表的数据结构：</p>
-<p>mysql&gt; select * from t;<br>+——+——+<br>| a    | b    |<br>+——+——+<br>| 0001 |    2 |<br>+——+——+<br>1 row in set (0.03 sec)</p>
-<p>mysql&gt; desc t;<br>+——-+————————–+——+—–+———+——-+<br>| Field | Type                     | Null | Key | Default | Extra |<br>+——-+————————–+——+—–+———+——-+<br>| a     | int(4) unsigned zerofill | YES  |     | NULL    |       |<br>| b     | int(10) unsigned         | YES  |     | NULL    |       |<br>+——-+————————–+——+—–+———+——-+<br>2 rows in set (0.04 sec)</p>
-<p> 这就是 zerofill 属性的作用，如果宽度小于设定的宽度，则自动填充 0.</p>
-<p><strong> 注意 </strong>：</p>
-<p> 在 MySQL 中 a 字段实际存储的还是 1. 可用 hex 函数证明.</p>
-<p>mysql&gt; select a,hex(a) from t;<br>+——+——–+<br>| a    | hex(a) |<br>+——+——–+<br>| 0001 | 1      |<br>+——+——–+<br>1 row in set (0.03 sec)</p>
-<p> 可以推测出 a 字段中的 0001 值的改变只是设置了 zerofill 属性后的一种格式化输出而已. 但为了一些业务的需求问题提供了一个很好的解决办法.</p>
+        <p>三种 PHP 数据安全防范示例</p>
+<ol>
+<li><p>常见的转义 html</p>
+<p>例如一个用户的表单输入获取</p>
+<p><code>$a = $_GET[&#39;username&#39;]</code></p>
+<p>其中的 username 值可能是一样有恶意的 JS 脚本可能造成不必要的麻烦。</p>
+<p><strong>解决办法</strong></p>
+<p>·<code>$a = htmlspecialchars($_GET[&#39;username&#39;],ENT_QUOTES);</code></p>
+<p><strong>htmlspecialchars()</strong> 函数把预定义的字符转换为 HTML 实体。</p>
+<p>预定义的字符是：</p>
+<ul>
+<li>&amp; （和号）成为 &amp;</li>
+<li>“ （双引号）成为 “</li>
+<li>‘ （单引号）成为 ‘</li>
+<li>&lt; （小于）成为 &lt;</li>
+<li>> （大于）成为 &gt;</li>
+</ul>
+<p><em>提示</em>：如需把特殊的 HTML 实体转换回字符，请使用 <a href="http://www.w3school.com.cn/php/func_string_htmlspecialchars_decode.asp" target="_blank" rel="external">htmlspecialchars_decode()</a> 函数。</p>
+</li>
+<li><p>防止 SQL 注入</p>
+<p>有两种方法</p>
+<ul>
+<li><p>第一种是 php.ini 中的 magic_quotes_gpc 设置为 on.</p>
+<p>magic_quotes_gpc 函数在 php 中的作用是判断解析用户提示的数据，如包括有:post、get、cookie 过来的数据增加转义字符“\”，以确保这些数据不会引起程序，特别是数据库语句因为特殊字符引起的污染而出现致命的错误</p>
+<p><em>注意 </em> 这个设置在 PHP6 中已经不可使用了，所以根据情况使用.</p>
+</li>
+<li><p>第二种就是使用 mysql_real_escape_string()函数.</p>
+</li>
+</ul>
+<p>​        语法：</p>
+<p>​         mysql_real_escape_string() 函数转义 SQL 语句中使用的字符串中的特殊字符。</p>
+<p>​    把获取的变量进行函数处理.</p>
+<p>​        <code>$a = mysql_real_escape_string($user);</code></p>
+</li>
+<li><p>对引号做两次转意</p>
+<p>这通常在开发者的环境中 magic_quotes 设置为 off，而在部署的服务器上 magic_quotes =on. PHP 会在 GET, POST 和 COOKIE 中的数据上重复运行 addslashes() 造成两次转义的现象。</p>
+<p>原始文本：</p>
+<p>It’s a string  magic quotes on : </p>
+<p> It\’s a string  </p>
+<p>又运行一次  addslashes(): </p>
+<p> It\‘s a string  </p>
+<p>HTML 输出:  It\’s a string</p>
+<p>​         </p>
+</li>
+</ol>
 
       
     </div>
@@ -484,7 +514,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://dou123.top/2017/08/28/Mysql之ZEROFILL数据类型属性补0操作/" title="Mysql 之 ZEROFILL 数据类型属性补 0 操作">http://dou123.top/2017/08/28/Mysql之ZEROFILL数据类型属性补0操作/</a>
+    <a href="http://dou123.top/2017/08/29/PHP数据安全/" title="PHP 数据安全">http://dou123.top/2017/08/29/PHP数据安全/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -499,7 +529,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mysql-字段类型属性/" rel="tag"># mysql 字段类型属性</a>
+            <a href="/tags/数据安全-PHP-函数/" rel="tag"># 数据安全 PHP 函数</a>
           
         </div>
       
@@ -512,8 +542,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/27/大话设计模式(一)/" rel="next" title="大话设计模式 (一)">
-                <i class="fa fa-chevron-left"></i> 大话设计模式 (一)
+              <a href="/2017/08/28/Mysql之ZEROFILL数据类型属性补0操作/" rel="next" title="Mysql 之 ZEROFILL 数据类型属性补 0 操作">
+                <i class="fa fa-chevron-left"></i> Mysql 之 ZEROFILL 数据类型属性补 0 操作
               </a>
             
           </div>
@@ -521,10 +551,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/29/PHP数据安全/" rel="prev" title="PHP 数据安全">
-                PHP 数据安全 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
