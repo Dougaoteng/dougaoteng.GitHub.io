@@ -115,18 +115,18 @@
 
 
 
-<meta name="description" content="[PHP]; PHP 还是一个不断发展的工具，其功能还在不断地删减; 而 php.ini 的设置更改可以反映出相当的变化，; 在使用新的 PHP 版本前，研究一下 php.ini 会有好处的 ;;;;;;;;;;;;;;;;;;;; 关于这个文件 ;;;;;;;;;;;;;;;;;;;; ; 这个文件控制了 PHP 许多方面的观点。为了让 PHP 读取这个文件，它必须被命名为; ‘php.ini’">
+<meta name="description" content="[PHP]; PHP还是一个不断发展的工具，其功能还在不断地删减; 而php.ini的设置更改可以反映出相当的变化，; 在使用新的PHP版本前，研究一下php.ini会有好处的">
 <meta name="keywords" content="php.ini 转载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP 配置文件详解（php.ini 详解 )">
 <meta property="og:url" content="http://dou123.top/2017/08/26/PHP-配置文件详解（php.ini-详解-)/index.html">
 <meta property="og:site_name" content="豆高腾">
-<meta property="og:description" content="[PHP]; PHP 还是一个不断发展的工具，其功能还在不断地删减; 而 php.ini 的设置更改可以反映出相当的变化，; 在使用新的 PHP 版本前，研究一下 php.ini 会有好处的 ;;;;;;;;;;;;;;;;;;;; 关于这个文件 ;;;;;;;;;;;;;;;;;;;; ; 这个文件控制了 PHP 许多方面的观点。为了让 PHP 读取这个文件，它必须被命名为; ‘php.ini’">
+<meta property="og:description" content="[PHP]; PHP还是一个不断发展的工具，其功能还在不断地删减; 而php.ini的设置更改可以反映出相当的变化，; 在使用新的PHP版本前，研究一下php.ini会有好处的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-29T11:58:58.291Z">
+<meta property="og:updated_time" content="2017-08-29T12:30:28.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP 配置文件详解（php.ini 详解 )">
-<meta name="twitter:description" content="[PHP]; PHP 还是一个不断发展的工具，其功能还在不断地删减; 而 php.ini 的设置更改可以反映出相当的变化，; 在使用新的 PHP 版本前，研究一下 php.ini 会有好处的 ;;;;;;;;;;;;;;;;;;;; 关于这个文件 ;;;;;;;;;;;;;;;;;;;; ; 这个文件控制了 PHP 许多方面的观点。为了让 PHP 读取这个文件，它必须被命名为; ‘php.ini’">
+<meta name="twitter:description" content="[PHP]; PHP还是一个不断发展的工具，其功能还在不断地删减; 而php.ini的设置更改可以反映出相当的变化，; 在使用新的PHP版本前，研究一下php.ini会有好处的">
 
 
 
@@ -412,8 +412,7 @@
       
 
       
-        <p>[PHP]<br>; PHP 还是一个不断发展的工具，其功能还在不断地删减<br>; 而 php.ini 的设置更改可以反映出相当的变化，<br>; 在使用新的 PHP 版本前，研究一下 php.ini 会有好处的</p>
-<p>;;;;;;;;;;;;;;;;;;;<br>; 关于这个文件 ;<br>;;;;;;;;;;;;;;;;;;;</p>
+        <p>[PHP]<br>; PHP 还是一个不断发展的工具，其功能还在不断地删减<br>; 而 php.ini 的设置更改可以反映出相当的变化，<br>; 在使用新的 PHP 版本前，研究一下 php.ini 会有好处的<br><a id="more"></a><br>;;;;;;;;;;;;;;;;;;;<br>; 关于这个文件 ;<br>;;;;;;;;;;;;;;;;;;;</p>
 <p>; 这个文件控制了 PHP 许多方面的观点。为了让 PHP 读取这个文件，它必须被命名为<br>; ‘php.ini’。PHP 将在这些地方依次查找该文件：当前工作目录；环境变量 PHPRC<br>; 指明的路径；编译时指定的路径。<br>; 在 windows 下，编译时的路径是 Windows 安装目录。<br>; 在命令行模式下，php.ini 的查找路径可以用 -c 参数替代。</p>
 <p>; 该文件的语法非常简单。空白字符和用分号’;’开始的行被简单地忽略（就象你可能 <br>; 猜到的一样）。 章节标题（例如 : [Foo]）也被简单地忽略，即使将来它们可能<br>; 有某种的意义。<br>;<br>; 指示被指定使用如下语法：<br>; 指示标识符 = 值<br>; directive = value<br>; 指示标识符 是 <em> 大小写敏感的 </em> - foo=bar 不同于 FOO = bar。<br>;<br>; 值可以是一个字符串，一个数字，一个 PHP 常量 (如： E_ALL or M_PI), INI 常量中的<br>; 一个 (On, Off, True, False, Yes, No and None) ，或是一个表达式<br>; (如: E_ALL &amp; ~E_NOTICE), 或是用引号括起来的字符串(“ foo”).<br>;<br>; INI 文件的表达式被限制于位运算符和括号。<br>; | bitwise OR<br>; &amp; bitwise AND<br>; ~ bitwise NOT<br>; ! boolean NOT<br>;<br>; 布尔标志可用 1, On, True or Yes 这些值置于开的状态。<br>; 它们可用 0, Off, False or No 这些值置于关的状态。<br>;<br>; 一个空字符串可以用在等号后不写任何东西表示，或者用 None 关键字:<br>;<br>; foo = ; 将 foo 置为空字符串<br>; foo = none ; 将 foo 置为空字符串<br>; foo = “ none” ; 将 foo 置为字符串’none’<br>;<br>; 如果你值设置中使用常量，而这些常量属于动态调入的扩展库（不是 PHP 的扩展，就是<br>; Zend 的扩展），你仅可以调入这些扩展的行<em> 之后 </em> 使用这些常量。<br>;<br>; 所有在 php.ini-dist 文件里设定的值与内建的默认值相同（这是说，如果 php.ini<br>; 没被使用或者你删掉了这些行，默认值与之相同）。</p>
 <p>;;;;;;;;;;;;;;;;;;;;<br>; 语言选项 ;<br>;;;;;;;;;;;;;;;;;;;;</p>

@@ -115,18 +115,18 @@
 
 
 
-<meta name="description" content="​     开启之后，主要会对系统操作、文件、权限设置等方法产生影响，平常项目基本上也用不到这些方法。主要我想还是用来应对 webshell 吧，减少被人植入 webshell 所带来的某些安全问题。 http://www.[PHP](http://lib.csdn.net/base/php).net/manual/zh/ini.sect.safe-mode.[php](http://lib.cs">
+<meta name="description" content="​     开启之后，主要会对系统操作、文件、权限设置等方法产生影响，平常项目基本上也用不到这些方法。主要我想还是用来应对webshell吧，减少被人植入webshell所带来的某些安全问题。 http://www.[PHP](http://lib.csdn.net/base/php).net/manual/zh/ini.sect.safe-mode.[php](http://lib.csdn.n">
 <meta name="keywords" content="php.ini  safe_mode 配置 转载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="php.ini 中 safe_mode 开启对 PHP 系统函数的影响">
 <meta property="og:url" content="http://dou123.top/2017/08/26/php.ini中safe_mode开启对PHP系统函数的影响/index.html">
 <meta property="og:site_name" content="豆高腾">
-<meta property="og:description" content="​     开启之后，主要会对系统操作、文件、权限设置等方法产生影响，平常项目基本上也用不到这些方法。主要我想还是用来应对 webshell 吧，减少被人植入 webshell 所带来的某些安全问题。 http://www.[PHP](http://lib.csdn.net/base/php).net/manual/zh/ini.sect.safe-mode.[php](http://lib.cs">
+<meta property="og:description" content="​     开启之后，主要会对系统操作、文件、权限设置等方法产生影响，平常项目基本上也用不到这些方法。主要我想还是用来应对webshell吧，减少被人植入webshell所带来的某些安全问题。 http://www.[PHP](http://lib.csdn.net/base/php).net/manual/zh/ini.sect.safe-mode.[php](http://lib.csdn.n">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-29T11:58:38.986Z">
+<meta property="og:updated_time" content="2017-08-29T12:30:44.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php.ini 中 safe_mode 开启对 PHP 系统函数的影响">
-<meta name="twitter:description" content="​     开启之后，主要会对系统操作、文件、权限设置等方法产生影响，平常项目基本上也用不到这些方法。主要我想还是用来应对 webshell 吧，减少被人植入 webshell 所带来的某些安全问题。 http://www.[PHP](http://lib.csdn.net/base/php).net/manual/zh/ini.sect.safe-mode.[php](http://lib.cs">
+<meta name="twitter:description" content="​     开启之后，主要会对系统操作、文件、权限设置等方法产生影响，平常项目基本上也用不到这些方法。主要我想还是用来应对webshell吧，减少被人植入webshell所带来的某些安全问题。 http://www.[PHP](http://lib.csdn.net/base/php).net/manual/zh/ini.sect.safe-mode.[php](http://lib.csdn.n">
 
 
 
@@ -415,7 +415,7 @@
         <p>​     开启之后，主要会对系统操作、文件、权限设置等方法产生影响，平常项目基本上也用不到这些方法。主要我想还是用来应对 webshell 吧，减少被人植入 webshell 所带来的某些安全问题。</p>
 <p><a href="http://www.[PHP](http://lib.csdn.net/base/php).net/manual/zh/ini.sect.safe-mode.[php](http://lib.csdn.net/base/php" target="_blank" rel="external">http://www.[PHP](http://lib.csdn.net/base/php).net/manual/zh/ini.sect.safe-mode.[php](http://lib.csdn.net/base/php</a>)</p>
 <p>php safe_mode 影响参数 <br> 函数名 限制</p>
-<p>dbmopen() 检查被操作的文件或目录是否与正在执行的脚本有相同的 UID（所有者）。<br>dbase_open() 检查被操作的文件或目录是否与正在执行的脚本有相同的 UID（所有者）。</p>
+<p>dbmopen() 检查被操作的文件或目录是否与正在执行的脚本有相同的 UID（所有者）。<br><a id="more"></a><br>dbase_open() 检查被操作的文件或目录是否与正在执行的脚本有相同的 UID（所有者）。</p>
 <p>filepro() 检查被操作的文件或目录是否与正在执行的脚本有相同的 UID（所有者）。<br>filepro_rowcount() 检查被操作的文件或目录是否与正在执行的脚本有相同的 UID（所有者）。<br>filepro_retrieve() 检查被操作的文件或目录是否与正在执行的脚本有相同的 UID（所有者）。</p>
 <p>ifx_<em> sql_safe<em>mode 限制, (!= safe mode)<br>ingres</em></em> sql_safe<em>mode 限制, (!= safe mode)<br>mysql</em>* sql_safe_mode 限制, (!= safe mode)<br>pg_loimport() 检查被操作的文件或目录是否与正在执行的脚本有相同的 UID（所有者）。<br>posix_mkfifo() 检查被操作的目录是否与正在执行的脚本有相同的 UID（所有者）。</p>
 <p>putenv() 遵循 ini 设置的 safe_mode_protected_env_vars 和 safe_mode_allowed_env_vars 选项。请参考 putenv() 函数的有关文档。<br>move_uploaded_file() 检查被操作的文件或目录是否与正在执行的脚本有相同的 UID（所有者）。</p>
