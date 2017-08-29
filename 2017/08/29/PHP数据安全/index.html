@@ -115,18 +115,18 @@
 
 
 
-<meta name="description" content="三种 PHP 数据安全防范示例  常见的转义 html 例如一个用户的表单输入获取 $a = $_GET[&amp;#39;username&amp;#39;] 其中的 username 值可能是一样有恶意的 JS 脚本可能造成不必要的麻烦。 解决办法 ·$a = htmlspecialchars($_GET[&amp;#39;username&amp;#39;],ENT_QUOTES); htmlspecialchars()">
+<meta name="description" content="三种PHP数据安全防范示例  常见的转义html 例如一个用户的表单输入获取 $a = $_GET[&amp;#39;username&amp;#39;] 其中的username值可能是一样有恶意的JS脚本可能造成不必要的麻烦。 解决办法">
 <meta name="keywords" content="数据安全 PHP 函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP 数据安全">
 <meta property="og:url" content="http://dou123.top/2017/08/29/PHP数据安全/index.html">
 <meta property="og:site_name" content="豆高腾">
-<meta property="og:description" content="三种 PHP 数据安全防范示例  常见的转义 html 例如一个用户的表单输入获取 $a = $_GET[&amp;#39;username&amp;#39;] 其中的 username 值可能是一样有恶意的 JS 脚本可能造成不必要的麻烦。 解决办法 ·$a = htmlspecialchars($_GET[&amp;#39;username&amp;#39;],ENT_QUOTES); htmlspecialchars()">
+<meta property="og:description" content="三种PHP数据安全防范示例  常见的转义html 例如一个用户的表单输入获取 $a = $_GET[&amp;#39;username&amp;#39;] 其中的username值可能是一样有恶意的JS脚本可能造成不必要的麻烦。 解决办法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-29T05:19:20.797Z">
+<meta property="og:updated_time" content="2017-08-29T07:31:38.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP 数据安全">
-<meta name="twitter:description" content="三种 PHP 数据安全防范示例  常见的转义 html 例如一个用户的表单输入获取 $a = $_GET[&amp;#39;username&amp;#39;] 其中的 username 值可能是一样有恶意的 JS 脚本可能造成不必要的麻烦。 解决办法 ·$a = htmlspecialchars($_GET[&amp;#39;username&amp;#39;],ENT_QUOTES); htmlspecialchars()">
+<meta name="twitter:description" content="三种PHP数据安全防范示例  常见的转义html 例如一个用户的表单输入获取 $a = $_GET[&amp;#39;username&amp;#39;] 其中的username值可能是一样有恶意的JS脚本可能造成不必要的麻烦。 解决办法">
 
 
 
@@ -419,6 +419,7 @@
 <p><code>$a = $_GET[&#39;username&#39;]</code></p>
 <p>其中的 username 值可能是一样有恶意的 JS 脚本可能造成不必要的麻烦。</p>
 <p><strong>解决办法</strong></p>
+<a id="more"></a>
 <p>·<code>$a = htmlspecialchars($_GET[&#39;username&#39;],ENT_QUOTES);</code></p>
 <p><strong>htmlspecialchars()</strong> 函数把预定义的字符转换为 HTML 实体。</p>
 <p>预定义的字符是：</p>

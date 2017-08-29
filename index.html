@@ -414,54 +414,20 @@
 
       
         
-          
-            <p>三种 PHP 数据安全防范示例</p>
+          <p>三种PHP数据安全防范示例</p>
 <ol>
-<li><p>常见的转义 html</p>
+<li><p>常见的转义html</p>
 <p>例如一个用户的表单输入获取</p>
 <p><code>$a = $_GET[&#39;username&#39;]</code></p>
-<p>其中的 username 值可能是一样有恶意的 JS 脚本可能造成不必要的麻烦。</p>
+<p>其中的username值可能是一样有恶意的JS脚本可能造成不必要的麻烦。</p>
 <p><strong>解决办法</strong></p>
-<p>·<code>$a = htmlspecialchars($_GET[&#39;username&#39;],ENT_QUOTES);</code></p>
-<p><strong>htmlspecialchars()</strong> 函数把预定义的字符转换为 HTML 实体。</p>
-<p>预定义的字符是：</p>
-<ul>
-<li>&amp; （和号）成为 &amp;</li>
-<li>“ （双引号）成为 “</li>
-<li>‘ （单引号）成为 ‘</li>
-<li>&lt; （小于）成为 &lt;</li>
-<li>> （大于）成为 &gt;</li>
-</ul>
-<p><em>提示</em>：如需把特殊的 HTML 实体转换回字符，请使用 <a href="http://www.w3school.com.cn/php/func_string_htmlspecialchars_decode.asp" target="_blank" rel="external">htmlspecialchars_decode()</a> 函数。</p>
-</li>
-<li><p>防止 SQL 注入</p>
-<p>有两种方法</p>
-<ul>
-<li><p>第一种是 php.ini 中的 magic_quotes_gpc 设置为 on.</p>
-<p>magic_quotes_gpc 函数在 php 中的作用是判断解析用户提示的数据，如包括有:post、get、cookie 过来的数据增加转义字符“\”，以确保这些数据不会引起程序，特别是数据库语句因为特殊字符引起的污染而出现致命的错误</p>
-<p><em>注意 </em> 这个设置在 PHP6 中已经不可使用了，所以根据情况使用.</p>
-</li>
-<li><p>第二种就是使用 mysql_real_escape_string()函数.</p>
-</li>
-</ul>
-<p>​        语法：</p>
-<p>​         mysql_real_escape_string() 函数转义 SQL 语句中使用的字符串中的特殊字符。</p>
-<p>​    把获取的变量进行函数处理.</p>
-<p>​        <code>$a = mysql_real_escape_string($user);</code></p>
-</li>
-<li><p>对引号做两次转意</p>
-<p>这通常在开发者的环境中 magic_quotes 设置为 off，而在部署的服务器上 magic_quotes =on. PHP 会在 GET, POST 和 COOKIE 中的数据上重复运行 addslashes() 造成两次转义的现象。</p>
-<p>原始文本：</p>
-<p>It’s a string  magic quotes on : </p>
-<p> It\’s a string  </p>
-<p>又运行一次  addslashes(): </p>
-<p> It\‘s a string  </p>
-<p>HTML 输出:  It\’s a string</p>
-<p>​         </p>
-</li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/29/PHP数据安全/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -606,157 +572,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/28/Mysql之ZEROFILL数据类型属性补0操作/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/27/大话设计模式(一)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="豆高腾">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="豆高腾">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/27/大话设计模式(一)/" itemprop="url">大话设计模式 (一)</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T22:04:15+08:00">
-                2017-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>标签（空格分隔）： 设计模式 大话 设计 </p>
-<h2 id="gt-仅供参考-ㄒoㄒ"><a href="#gt-仅供参考-ㄒoㄒ" class="headerlink" title="&gt; 仅供参考 /(ㄒoㄒ)/~~"></a>&gt; 仅供参考 /(ㄒoㄒ)/~~</h2><p> <strong> 相关的对应的代码会贴上百度云，是用JAVA写的。想看的可以下载（在文章末尾）。暂时只是一些个概念和大体结构，大部分（jihu）是没有代码的，理解起来肯定会比较难（或许根本理解不了），whatever ,只是个人读书笔记，比较粗糙，凑活看吧。哈哈。</strong></p>
-<h2 id="一-、简单工厂模式"><a href="#一-、简单工厂模式" class="headerlink" title="一 、简单工厂模式"></a>一 、简单工厂模式</h2><p>用一个单独的类来实现易修改和扩展创造实例的过程。</p>
-<p>有图</p>
-<p>​</p>
-<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/15g5l70hp4.png" alt="file"><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/27/大话设计模式(一)/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -953,6 +768,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/27/大话设计模式(二)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="豆高腾">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ovc4tr3jd.bkt.clouddn.com/blog/170827/4cG36KCIla.jpg?imageslim">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="豆高腾">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/27/大话设计模式(二)/" itemprop="url">大话设计模式 (二)</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-27T22:04:15+08:00">
+                2017-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="十三-、状态模式"><a href="#十三-、状态模式" class="headerlink" title="十三 、状态模式"></a>十三 、状态模式</h3><blockquote>
+<p>状态模式（State）,当一个对象的内在状态改变时允许改变其行为，这个对象看起来像是改变了其类。（DP）</p>
+</blockquote>
+<p>状态模式主要解决的是当控制一个对象状态转换的条件表达式过于复杂时的情况。把状态的判断逻辑转移到表示不同状态的一系列类当中，可以把复杂的判断逻辑简化。<br><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/s2gfypVH25.png" alt="file"></p>
+<ul>
+<li>使用时机<ul>
+<li>当一个对象的行为取决于它的状态，并且它必须在运行时刻根据它的状态改变它的行为时，就可以考虑使用状态模式了。</li>
+</ul>
+</li>
+</ul>
+<p>[此处应有（meiyou）代码(zi ji kan)]<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/27/大话设计模式(二)/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/27/大话设计模式(四)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1099,7 +1070,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/27/大话设计模式(二)/">
+    <link itemprop="mainEntityOfPage" href="http://dou123.top/2017/08/27/大话设计模式(一)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="豆高腾">
@@ -1118,7 +1089,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/27/大话设计模式(二)/" itemprop="url">大话设计模式 (二)</a></h2>
+                <a class="post-title-link" href="/2017/08/27/大话设计模式(一)/" itemprop="url">大话设计模式 (一)</a></h2>
         
 
         <div class="post-meta">
@@ -1191,20 +1162,15 @@
 
       
         
-          <h3 id="十三-、状态模式"><a href="#十三-、状态模式" class="headerlink" title="十三 、状态模式"></a>十三 、状态模式</h3><blockquote>
-<p>状态模式（State）,当一个对象的内在状态改变时允许改变其行为，这个对象看起来像是改变了其类。（DP）</p>
-</blockquote>
-<p>状态模式主要解决的是当控制一个对象状态转换的条件表达式过于复杂时的情况。把状态的判断逻辑转移到表示不同状态的一系列类当中，可以把复杂的判断逻辑简化。<br><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/s2gfypVH25.png" alt="file"></p>
-<ul>
-<li>使用时机<ul>
-<li>当一个对象的行为取决于它的状态，并且它必须在运行时刻根据它的状态改变它的行为时，就可以考虑使用状态模式了。</li>
-</ul>
-</li>
-</ul>
-<p>[此处应有（meiyou）代码(zi ji kan)]<br>
+          <p>标签（空格分隔）： 设计模式 大话 设计 </p>
+<h2 id="gt-仅供参考-ㄒoㄒ"><a href="#gt-仅供参考-ㄒoㄒ" class="headerlink" title="&gt; 仅供参考 /(ㄒoㄒ)/~~"></a>&gt; 仅供参考 /(ㄒoㄒ)/~~</h2><p> <strong> 相关的对应的代码会贴上百度云，是用JAVA写的。想看的可以下载（在文章末尾）。暂时只是一些个概念和大体结构，大部分（jihu）是没有代码的，理解起来肯定会比较难（或许根本理解不了），whatever ,只是个人读书笔记，比较粗糙，凑活看吧。哈哈。</strong></p>
+<h2 id="一-、简单工厂模式"><a href="#一-、简单工厂模式" class="headerlink" title="一 、简单工厂模式"></a>一 、简单工厂模式</h2><p>用一个单独的类来实现易修改和扩展创造实例的过程。</p>
+<p>有图</p>
+<p>​</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201707/21/13087/15g5l70hp4.png" alt="file"><br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/27/大话设计模式(二)/#more" rel="contents">
+            <a class="btn" href="/2017/08/27/大话设计模式(一)/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
