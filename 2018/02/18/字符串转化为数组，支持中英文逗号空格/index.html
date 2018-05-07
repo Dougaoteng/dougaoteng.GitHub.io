@@ -115,18 +115,18 @@
 
 
 
-<meta name="description" content="1234567891011121314151617181920/** * 字符串转化为数组，支持中英文逗号空格  * * @param     string  $strs  带有特殊符号的字符串  * @return    int */function strsToArray($strs=&amp;apos; 豆高腾，飞沐, 新年，周鹏, 安涛 &amp;apos;) &amp;#123;  $result = arr">
+<meta name="description" content="支持中英文逗号空格">
 <meta name="keywords" content="字符串数组转换">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字符串转化为数组，支持中英文逗号空格">
 <meta property="og:url" content="http://dou123.top/2018/02/18/字符串转化为数组，支持中英文逗号空格/index.html">
 <meta property="og:site_name" content="豆高腾">
-<meta property="og:description" content="1234567891011121314151617181920/** * 字符串转化为数组，支持中英文逗号空格  * * @param     string  $strs  带有特殊符号的字符串  * @return    int */function strsToArray($strs=&amp;apos; 豆高腾，飞沐, 新年，周鹏, 安涛 &amp;apos;) &amp;#123;  $result = arr">
+<meta property="og:description" content="支持中英文逗号空格">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-06T15:02:23.987Z">
+<meta property="og:updated_time" content="2018-05-06T15:07:08.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符串转化为数组，支持中英文逗号空格">
-<meta name="twitter:description" content="1234567891011121314151617181920/** * 字符串转化为数组，支持中英文逗号空格  * * @param     string  $strs  带有特殊符号的字符串  * @return    int */function strsToArray($strs=&amp;apos; 豆高腾，飞沐, 新年，周鹏, 安涛 &amp;apos;) &amp;#123;  $result = arr">
+<meta name="twitter:description" content="支持中英文逗号空格">
 
 
 
@@ -436,8 +436,7 @@
       
 
       
-        <a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 字符串转化为数组，支持中英文逗号空格 </div><div class="line"> *</div><div class="line"> * @param     string  $strs  带有特殊符号的字符串 </div><div class="line"> * @return    int</div><div class="line"> */</div><div class="line">function strsToArray($strs=&apos; 豆高腾，飞沐, 新年，周鹏, 安涛 &apos;) &#123;</div><div class="line">  $result = array();</div><div class="line">  $array  = array();</div><div class="line">  $strs   = str_replace(&apos;，&apos;, &apos;,&apos;, $strs);</div><div class="line">  $array  = explode(&apos;,&apos;, $strs);</div><div class="line">  foreach ($array as $key =&gt; $value) &#123;</div><div class="line">    if (&apos;&apos; != ($value = trim($value))) &#123;</div><div class="line">      $result[] = $value;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  return $result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var_dump(strsToArray()  );</div></pre></td></tr></table></figure>
+        <p> 支持中英文逗号空格 <br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 字符串转化为数组，支持中英文逗号空格 </div><div class="line"> *</div><div class="line"> * @param     string  $strs  带有特殊符号的字符串 </div><div class="line"> * @return    int</div><div class="line"> */</div><div class="line">function strsToArray($strs=&apos; 豆高腾，飞沐, 新年，周鹏, 安涛 &apos;) &#123;</div><div class="line">  $result = array();</div><div class="line">  $array  = array();</div><div class="line">  $strs   = str_replace(&apos;，&apos;, &apos;,&apos;, $strs);</div><div class="line">  $array  = explode(&apos;,&apos;, $strs);</div><div class="line">  foreach ($array as $key =&gt; $value) &#123;</div><div class="line">    if (&apos;&apos; != ($value = trim($value))) &#123;</div><div class="line">      $result[] = $value;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  return $result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var_dump(strsToArray()  );</div></pre></td></tr></table></figure></p>
 
       
     </div>
